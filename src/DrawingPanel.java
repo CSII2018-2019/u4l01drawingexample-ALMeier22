@@ -9,25 +9,28 @@ import javax.swing.JPanel;
 
 public class DrawingPanel extends JPanel {
 	private Color myBlue = new Color(177, 196, 212);
+	private Color myRed = new Color(219, 52, 52);
 	public DrawingPanel() {
 		//setBackground(Color.WHITE);
 		
 	}
 	
 	public void paintComponent(Graphics g) {
-		//g.setColor(Color.RED);
+	
 		
 		//Triangle 
-		g.setColor(myBlue);
-		g.drawLine(320,20, 320, 450);
+		Graphics2D g3 = (Graphics2D) g;
+	    g3.setStroke(new BasicStroke(2));
+		g3.setColor(myBlue);
+		g3.drawLine(320,20, 320, 450);
 		//g.drawLine(320, 450, 100, 450);
-		g.drawLine(100, 450, 320, 20);
+		g3.drawLine(100, 450, 320, 20);
 						
 		
 		//AM
 	    Graphics2D g2 = (Graphics2D) g;
-	    g2.setStroke(new BasicStroke(4));
-		g2.setColor(Color.red);
+	    g2.setStroke(new BasicStroke(5));
+		g2.setColor(myRed);
 		g2.drawLine(163,330,240,180);
 		g2.drawLine(240,180,240,330);
 		g2.drawLine(240,180,280,260);
@@ -36,11 +39,11 @@ public class DrawingPanel extends JPanel {
 		g2.drawLine(200,260,240,260);
 		
 		//Rectangle 
-		g.setColor(Color.cyan);
+		g.setColor(new Color(76, 239, 255));
 		g.fillRect(110,375,210,25);
-		g.setColor(Color.MAGENTA);
+		g.setColor(new Color(255, 22, 184));
 		g.fillRect(60,400,260,25);
-		g.setColor(Color.YELLOW);
+		g.setColor(new Color(255, 246, 9));
 		g.fillRect(80,425,240,25);
 
 		
